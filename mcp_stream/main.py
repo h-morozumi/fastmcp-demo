@@ -11,5 +11,5 @@ def add(a: int, b: int) -> int:
 
 # Ruun the Server
 if __name__ == "__main__":
-    # This runs the server, defaulting to Streamable HTTP
+    # This runs the server
     mcp.run(transport="streamable-http",port=9000)

@@ -10,5 +10,5 @@ def multiply(a: int, b: int) -> int:
 
 # Ruun the Server
 if __name__ == "__main__":
-    # This runs the server, defaulting to SSE
+    # This runs the server
     mcp.run(transport="sse")

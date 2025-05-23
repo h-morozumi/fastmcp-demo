@@ -32,7 +32,7 @@ INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
 ```
 
-## Checking the Operation of MCP Server (SSE) Using MCP Inspector
+## Checking the Operation of MCP Server (Streamable HTTP) Using MCP Inspector
 
 1. Open a new terminal.
 2. Activate the virtual environment using venv.

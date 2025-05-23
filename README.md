@@ -12,6 +12,12 @@ This repository is a demo project for FastMCP. Using FastMCP, it creates MCP Ser
 
 ## Sub-Projects
 
+After checking out the repository, initialize each project by executing the following command:
+```
+uv sync
+```
+This will create a virtual environment and install the required dependencies for each sub-project.
+
 ### 1. mcp_stdio
 - **Description**: Implements standard input/output MCP Server.
 - **Location**: `mcp_stdio/`
