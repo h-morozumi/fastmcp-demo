@@ -10,21 +10,57 @@ The primary purpose of the `mcp_stream` project is to demonstrate how to handle 
 
 To run the `mcp_stream` project, execute the following command in your terminal:
 
+1. Activate the virtual environment using venv:
+   ```
+   .venv/Scripts/activate
+   ```
+2. Run the main application using the command:
+   ```
+   uv run main.py
+   ```
+   or
+   ```
+   fastmcp run main.py --transport streamable-http --port 9000 
+   ```
+
 ```
-python main.py
+(mcp-stream) PS C:\Users\fastmcp-demo\mcp_stream> uv run main.py
+[05/23/25 11:58:09] INFO     Starting MCP server 'My MCP Server Streamable HTTP' with transport 'streamable-http' on http://127.0.0.1:9000/mcp                  server.py:796
+INFO:     Started server process [28588]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
 ```
 
-Ensure that you have the necessary dependencies installed before running the project.
+## Checking the Operation of MCP Server (SSE) Using MCP Inspector
 
-## Dependencies
+1. Open a new terminal.
+2. Activate the virtual environment using venv.
+   ```
+   .venv/Scripts/activate
+   ```
+3. Run the following command to start MCP Inspector.
+   ```
+   fastmcp dev main.py
+   ```
+4. Access the URL.
 
-- Python 3.x
-- Any additional libraries required for streaming functionalities (please refer to the `requirements.txt` file if available).
+   Once started, access [http://127.0.0.1:6274](http://127.0.0.1:6274).
+   ```
+   (mcp-stdio) PS C:\Users\fastmcp-demo\mcp_stream> fastmcp dev main.py
+   Starting MCP inspector...
+   🔍 MCP Inspector is up and running at http://127.0.0.1:6274 🚀
+   ⚙️ Proxy server listening on port 6277
+   ```
+5. Input parameters in the input box and press the Connect button to start the MCP server.
+
+   - Transport Type:
+      - `Streamable HTTP` - Streamable HTTP
+   - URL:
+      - http://localhost:9000/mcp
+
 
 ## Example
 
 Provide an example of how to use the streaming functionalities here, including any relevant code snippets or command-line instructions.
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.

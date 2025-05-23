@@ -10,20 +10,18 @@ The `mcp_sse` project is part of the FastMCP demo, which implements server-sent 
 
 ## Usage
 
-1. Ensure you have Python installed on your machine.
-2. Navigate to the `mcp_sse` directory.
-3. Run the main application using the command:
+1. Activate the virtual environment using venv:
    ```
-   python main.py
+   .venv/Scripts/activate
    ```
-4. Access the SSE endpoint from your web browser or a client that supports SSE.
-
-```
-.venv/Scripts/activate
-uv run main.py
-     or
-fastmcp run main.py --transport sse 
-```
+2. Run the main application using the command:
+   ```
+   uv run main.py
+   ```
+   or
+   ```
+   fastmcp run main.py --transport sse 
+   ```
 
 ```
 (mcp-sse) PS C:\Users\fastmcp-demo\mcp_sse> uv run main.py
@@ -34,12 +32,32 @@ INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
 
+## Checking the Operation of MCP Server (SSE) Using MCP Inspector
 
+1. Open a new terminal.
+2. Activate the virtual environment using venv.
+   ```
+   .venv/Scripts/activate
+   ```
+3. Run the following command to start MCP Inspector.
+   ```
+   fastmcp dev main.py
+   ```
+4. Access the URL.
 
-## Dependencies
+   Once started, access [http://127.0.0.1:6274](http://127.0.0.1:6274).
+   ```
+   (mcp-stdio) PS C:\Users\fastmcp-demo\mcp_sse> fastmcp dev main.py
+   Starting MCP inspector...
+   🔍 MCP Inspector is up and running at http://127.0.0.1:6274 🚀
+   ⚙️ Proxy server listening on port 6277
+   ```
+5. Input parameters in the input box and press the Connect button to start the MCP server.
 
-- Flask (or any other web framework you choose to use for handling HTTP requests).
-- Any other libraries required for your specific implementation.
+   - Transport Type:
+      - `sse` - Server-Sent Events
+   - URL:
+      - http://localhost:8000/sse
 
 ## Example
 
